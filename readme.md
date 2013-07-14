@@ -27,8 +27,8 @@ grunt.loadNpmTasks('grunt-eslint');
 
 ```js
 grunt.initConfig({
-	eslint: {							// Task
-		target: ['file.js']	// Array of files
+	eslint: {					// Task
+		target: ['file.js']		// Array of files
 	}
 });
 
