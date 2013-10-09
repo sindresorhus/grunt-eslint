@@ -2,6 +2,10 @@
 module.exports = function (grunt) {
 	grunt.initConfig({
 		eslint: {
+			options: {
+				config: 'conf/eslint.json',
+				rulesdir: 'conf/rules'
+			},
 			validate: ['test/fixture/{1,2}.js']
 		},
 		shell: {
@@ -11,7 +15,7 @@ module.exports = function (grunt) {
 						process.stdout.write(stdout);
 						process.stderr.write(stderr);
 
-						if (/test\/fixture\/1\.js: line 1, col 0, Warning/.test(stdout)) {
+						if (/testing custom rules/.test(stdout)) {
 							cb();
 						} else {
 							cb(false);

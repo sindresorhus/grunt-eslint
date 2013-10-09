@@ -9,7 +9,8 @@
     "report",
     "jshint",
     "jslint",
-    "ecmascript"
+    "ecmascript",
+    "esprima"
   ],
   "homepage": "https://github.com/sindresorhus/grunt-eslint",
   "bugs": "https://github.com/sindresorhus/grunt-eslint/issues",
@@ -26,11 +27,13 @@
     "test": "grunt"
   },
   "dependencies": {
-    "eslint": "0.0.5"
+    "eslint": "0.1.0-dev",
+    "chalk": "~0.2.1",
+    "text-table": "~0.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-shell": "~0.3.1"
+    "grunt-shell": "~0.4.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"
@@ -42,6 +45,6 @@
     "type": "MIT"
   },
   "files": [
-    "tasks/eslint.js"
+    "tasks/*"
   ]
 }
