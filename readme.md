@@ -50,12 +50,12 @@ grunt.registerTask('default', ['eslint']);
 
 ```js
 grunt.initConfig({
-	eslint: {							// task
+	eslint: {								// task
 		options: {
-			config: 'conf/eslint.json',	// custom config
-			rules: 'conf/rules'			// custom rules
+			config: 'conf/eslint.json',		// custom config
+			rulesdir: 'conf/rules'			// custom rules
 		},
-		target: ['file.js']				// array of files
+		target: ['file.js']					// array of files
 	}
 });
 
