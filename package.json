@@ -1,6 +1,6 @@
 {
   "name": "grunt-eslint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Validate files with ESLint - A tool for identifying and reporting on patterns in JavaScript",
   "keywords": [
     "gruntplugin",
