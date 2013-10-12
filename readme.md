@@ -85,7 +85,7 @@ Recommended read: [Working with Rules](https://github.com/nzakas/eslint/blob/mas
 #### formatter
 
 Type: `String`  
-Default: *(see screenshot)*
+Default: [`node_modules/eslint-stylish/stylish.js`](https://github.com/sindresorhus/eslint-stylish)
 
 Name of a [built-in formatter](https://github.com/nzakas/eslint/tree/master/lib/formatters) or path to a custom one.
 

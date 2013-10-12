@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
 		var eslint = require('eslint').cli;
 		var options = this.options({
-			format: path.join(__dirname, 'formatters', 'grunt.js')
+			format: path.join(__dirname, '..', 'node_modules', 'eslint-stylish', 'stylish.js')
 		});
 		var args = [];
 

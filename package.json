@@ -28,8 +28,7 @@
   },
   "dependencies": {
     "eslint": "0.1.0-dev",
-    "chalk": "~0.2.1",
-    "text-table": "~0.2.0"
+    "eslint-stylish": "~0.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

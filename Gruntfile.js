@@ -12,9 +12,6 @@ module.exports = function (grunt) {
 			eslint: {
 				options: {
 					callback: function (err, stdout, stderr, cb) {
-						process.stdout.write(stdout);
-						process.stderr.write(stderr);
-
 						if (/testing custom rules/.test(stdout)) {
 							cb();
 						} else {
@@ -29,6 +26,5 @@ module.exports = function (grunt) {
 
 	grunt.loadTasks('tasks');
 	grunt.loadNpmTasks('grunt-shell');
-
 	grunt.registerTask('default', ['shell:eslint']);
 };
