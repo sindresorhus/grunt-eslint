@@ -63,6 +63,22 @@ grunt.loadNpmTasks('grunt-eslint');
 grunt.registerTask('default', ['eslint']);
 ```
 
+### Example with custom formatter
+
+```js
+grunt.initConfig({
+	eslint: {								// task
+		options: {
+			format: require('eslint-tap')
+		},
+		target: ['file.js']					// array of files
+	}
+});
+
+grunt.loadNpmTasks('grunt-eslint');
+grunt.registerTask('default', ['eslint']);
+```
+
 
 ### Options
 
@@ -82,12 +98,14 @@ Path to a directory with custom rules. Your custom rules will be used in additio
 
 Recommended read: [Working with Rules](https://github.com/nzakas/eslint/blob/master/docs/developer-guide/working-with-rules.md)
 
-#### formatter
+#### format
 
 Type: `String`  
-Default: [`node_modules/eslint-stylish/stylish.js`](https://github.com/sindresorhus/eslint-stylish)
+Default: [`require('eslint-stylish')`](https://github.com/sindresorhus/eslint-stylish)
 
 Name of a [built-in formatter](https://github.com/nzakas/eslint/tree/master/lib/formatters) or path to a custom one.
+
+Some formatters you might find useful: [eslint-stylish](https://github.com/sindresorhus/eslint-stylish) (see screenshot), [eslint-json](https://github.com/sindresorhus/eslint-json), [eslint-tap](https://github.com/sindresorhus/eslint-tap).
 
 
 ## License
