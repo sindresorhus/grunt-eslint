@@ -27,7 +27,7 @@
     "test": "grunt"
   },
   "dependencies": {
-    "eslint": "0.1.0-dev",
+    "eslint": "~0.1.0",
     "eslint-stylish": "~0.1.0"
   },
   "devDependencies": {
