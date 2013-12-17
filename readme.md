@@ -1,4 +1,4 @@
-# grunt-eslint [![Build Status](https://secure.travis-ci.org/sindresorhus/grunt-eslint.png?branch=master)](http://travis-ci.org/sindresorhus/grunt-eslint)
+# grunt-eslint [![Build Status](https://secure.travis-ci.org/sindresorhus/grunt-eslint.png?branch=master)](http://travis-ci.org/sindresorhus/grunt-eslint) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 Validate files with [ESLint](https://github.com/nzakas/eslint).
 
