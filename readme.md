@@ -1,12 +1,6 @@
-# grunt-eslint [![Build Status](https://secure.travis-ci.org/sindresorhus/grunt-eslint.png?branch=master)](http://travis-ci.org/sindresorhus/grunt-eslint) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# [grunt](http://gruntjs.com)-eslint [![Build Status](https://secure.travis-ci.org/sindresorhus/grunt-eslint.png?branch=master)](http://travis-ci.org/sindresorhus/grunt-eslint) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-Validate files with [ESLint](https://github.com/nzakas/eslint).
-
-> ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. In many ways, it is similar to JSLint and JSHint with a few exceptions:
-
->- ESLint uses Esprima for JavaScript parsing.
->- ESLint uses an AST to evaluate patterns in code.
->- ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.
+> Validate files with [ESLint](https://github.com/nzakas/eslint)
 
 ![screenshot](screenshot.png)
 

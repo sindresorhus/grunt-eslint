@@ -2,6 +2,22 @@
   "name": "grunt-eslint",
   "version": "0.1.3",
   "description": "Validate files with ESLint - A tool for identifying and reporting on patterns in JavaScript",
+  "license": "MIT",
+  "repository": "sindresorhus/grunt-eslint",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "files": [
+    "tasks"
+  ],
   "keywords": [
     "gruntplugin",
     "lint",
@@ -12,38 +28,16 @@
     "ecmascript",
     "esprima"
   ],
-  "homepage": "https://github.com/sindresorhus/grunt-eslint",
-  "bugs": "https://github.com/sindresorhus/grunt-eslint/issues",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/sindresorhus/grunt-eslint.git"
-  },
-  "scripts": {
-    "test": "grunt"
-  },
   "dependencies": {
     "eslint": "~0.2.0",
-    "eslint-stylish": "~0.1.0"
+    "eslint-stylish": "~0.1.0",
+    "chalk": "~0.4.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-shell": "~0.4.0"
+    "grunt": "~0.4.2",
+    "grunt-shell": "~0.6.0"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"
-  },
-  "engines": {
-    "node": ">=0.8.0"
-  },
-  "licenses": {
-    "type": "MIT"
-  },
-  "files": [
-    "tasks/*"
-  ]
+  }
 }

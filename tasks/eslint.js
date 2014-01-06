@@ -1,5 +1,6 @@
 'use strict';
 var path = require('path');
+var chalk = require('chalk');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
@@ -10,7 +11,7 @@ module.exports = function (grunt) {
 		var args = [];
 
 		if (this.filesSrc.length === 0) {
-			return grunt.log.writeln('Couldn\'t find any files to validate.');
+			return grunt.log.writeln(chalk.magenta('Couldn\'t find any files to validate.'));
 		}
 
 		if (options.config) {
