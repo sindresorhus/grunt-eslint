@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 		}
 
 		if (options.config) {
-			args.push('--config', options.config);
+			args.push('--config', path.resolve(options.config));
 		}
 
 		if (options.rulesdir) {
