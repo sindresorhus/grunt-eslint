@@ -5,9 +5,7 @@ var chalk = require('chalk');
 module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
 		var eslint = require('eslint').cli;
-		var options = this.options({
-			format: require('eslint-stylish')
-		});
+		var options = this.options();
 		var args = [];
 
 		if (this.filesSrc.length === 0) {

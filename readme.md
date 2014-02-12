@@ -97,11 +97,11 @@ Recommended read: [Working with Rules](https://github.com/nzakas/eslint/blob/mas
 #### format
 
 Type: `String`  
-Default: [`require('eslint-stylish')`](https://github.com/sindresorhus/eslint-stylish)
+Default: `'stylish'`
 
 Name of a [built-in formatter](https://github.com/nzakas/eslint/tree/master/lib/formatters) or path to a custom one.
 
-Some formatters you might find useful: [eslint-stylish](https://github.com/sindresorhus/eslint-stylish) (see screenshot), [eslint-json](https://github.com/sindresorhus/eslint-json), [eslint-tap](https://github.com/sindresorhus/eslint-tap).
+Some formatters you might find useful: [eslint-json](https://github.com/sindresorhus/eslint-json), [eslint-tap](https://github.com/sindresorhus/eslint-tap).
 
 
 ## License

@@ -11,8 +11,10 @@ module.exports = function (grunt) {
 		shell: {
 			eslint: {
 				options: {
+					stdout: true,
+					stderr: true,
 					callback: function (err, stdout, stderr, cb) {
-						if (/testing custom rules/.test(stdout)) {
+						if (/test\/fixture\/1\.js/.test(stdout)) {
 							cb();
 						} else {
 							cb(false);
