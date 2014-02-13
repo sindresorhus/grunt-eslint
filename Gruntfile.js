@@ -15,7 +15,11 @@ module.exports = function (grunt) {
 					stderr: true,
 					callback: function (err, stdout, stderr, cb) {
 						if (/test\/fixture\/1\.js/.test(stdout)) {
-							cb();
+							if (!/camelcase/.test(stdout)) {
+								cb();
+							} else {
+								cb(false);
+							}
 						} else {
 							cb(false);
 						}
