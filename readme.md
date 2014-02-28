@@ -34,7 +34,9 @@ See the grunt [docs](https://github.com/gruntjs/grunt/wiki) on how to [configure
 ```js
 grunt.initConfig({
 	eslint: {					// task
-		target: ['file.js']		// array of files
+		files: {
+			src: ['file.js']		// array of files
+		}
 	}
 });
 
@@ -51,7 +53,9 @@ grunt.initConfig({
 			config: 'conf/eslint.json',		// custom config
 			rulesdir: 'conf/rules'			// custom rules
 		},
-		target: ['file.js']					// array of files
+		files: {
+			src: ['file.js']					// array of files
+		}
 	}
 });
 
