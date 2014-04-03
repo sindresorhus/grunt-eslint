@@ -1,4 +1,4 @@
-# [grunt](http://gruntjs.com)-eslint [![Build Status](https://secure.travis-ci.org/sindresorhus/grunt-eslint.png?branch=master)](http://travis-ci.org/sindresorhus/grunt-eslint) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# grunt-eslint [![Build Status](https://travis-ci.org/sindresorhus/grunt-eslint.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-eslint)
 
 > Validate files with [ESLint](https://github.com/nzakas/eslint)
 
@@ -9,8 +9,8 @@
 
 If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
 
-```sh
-npm install --save-dev grunt-eslint
+```bash
+$ npm install --save-dev grunt-eslint
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
@@ -106,4 +106,4 @@ Some formatters you might find useful: [eslint-json](https://github.com/sindreso
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
