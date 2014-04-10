@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 		}
 
 		options._ = this.filesSrc; // set positional arguments
-		options.config = path.resolve(options.config);
+		options.config = options.config ? path.resolve(options.config) : '';
 
 		return eslint.execute(options) === 0;
 	});
