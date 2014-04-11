@@ -1,6 +1,6 @@
 {
   "name": "grunt-eslint",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Validate files with ESLint - A tool for identifying and reporting on patterns in JavaScript",
   "license": "MIT",
   "repository": "sindresorhus/grunt-eslint",
@@ -29,7 +29,7 @@
     "esprima"
   ],
   "dependencies": {
-    "eslint": "~0.4.0",
+    "eslint": "~0.5.0",
     "chalk": "~0.4.0"
   },
   "devDependencies": {
