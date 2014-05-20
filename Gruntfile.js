@@ -4,15 +4,14 @@ module.exports = function (grunt) {
 		eslint: {
 			options: {
 				config: 'conf/eslint.json',
-				rulesdir: 'conf/rules'
+				rulesdir: ['conf/rules']
 			},
 			validate: ['test/fixture/{1,2}.js']
 		},
 		shell: {
 			eslint: {
+				command: 'grunt eslint',
 				options: {
-					stdout: true,
-					stderr: true,
 					callback: function (err, stdout, stderr, cb) {
 						if (/test\/fixture\/1\.js/.test(stdout)) {
 							if (!/camelcase/.test(stdout)) {
@@ -24,8 +23,7 @@ module.exports = function (grunt) {
 							cb(false);
 						}
 					}
-				},
-				command: 'grunt eslint'
+				}
 			}
 		}
 	});

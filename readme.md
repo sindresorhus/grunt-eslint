@@ -49,7 +49,7 @@ grunt.initConfig({
 	eslint: {								// task
 		options: {
 			config: 'conf/eslint.json',		// custom config
-			rulesdir: 'conf/rules'			// custom rules
+			rulesdir: ['conf/rules']		// custom rules
 		},
 		target: ['file.js']					// array of files
 	}
@@ -80,23 +80,23 @@ grunt.registerTask('default', ['eslint']);
 
 #### config
 
-Type: `String`  
+Type: `string`  
 Default: [built-in eslint.json](https://github.com/iancmyers/eslint-grunt/blob/master/tasks/conf/eslint.json)
 
 Path to your [ESLint config file](https://github.com/nzakas/eslint/blob/master/docs/rules/README.md) (`eslint.json`).
 
 #### rulesdir
 
-Type: `String`  
+Type: `array`  
 Default: [built-in rules directory](https://github.com/nzakas/eslint/tree/master/lib/rules)
 
-Path to a directory with custom rules. Your custom rules will be used in addition to the built-in ones.
+Paths to directories with custom rules. Your custom rules will be used in addition to the built-in ones.
 
 Recommended read: [Working with Rules](https://github.com/nzakas/eslint/blob/master/docs/developer-guide/working-with-rules.md)
 
 #### format
 
-Type: `String`  
+Type: `string`  
 Default: `'stylish'`
 
 Name of a [built-in formatter](https://github.com/nzakas/eslint/tree/master/lib/formatters) or path to a custom one.
