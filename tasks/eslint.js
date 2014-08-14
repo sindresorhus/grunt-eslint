@@ -8,7 +8,8 @@ module.exports = function (grunt) {
 		var options = this.options();
 
 		if (this.filesSrc.length === 0) {
-			return grunt.log.writeln(chalk.magenta('Couldn\'t find any files to validate.'));
+			grunt.log.writeln(chalk.magenta('Couldn\'t find any files to validate.'));
+			return;
 		}
 
 		options._ = this.filesSrc; // set positional arguments

@@ -9,7 +9,7 @@
 
 If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
 
-```bash
+```sh
 $ npm install --save-dev grunt-eslint
 ```
 
@@ -106,4 +106,4 @@ Some formatters you might find useful: [eslint-json](https://github.com/sindreso
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)
