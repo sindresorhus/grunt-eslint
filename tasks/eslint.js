@@ -1,10 +1,10 @@
 'use strict';
 var path = require('path');
 var chalk = require('chalk');
+var eslint = require('eslint').cli;
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
-		var eslint = require('eslint').cli;
 		var options = this.options();
 
 		if (this.filesSrc.length === 0) {

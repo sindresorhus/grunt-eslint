@@ -5,87 +5,68 @@
 ![screenshot](screenshot.png)
 
 
-## Getting Started
-
-If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
+## Install
 
 ```sh
 $ npm install --save-dev grunt-eslint
 ```
 
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+
+## Usage
 
 ```js
-grunt.loadNpmTasks('grunt-eslint');
-```
+require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
-*Tip: the [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) module makes it easier to load multiple grunt tasks.*
-
-[grunt]: http://gruntjs.com
-[Getting Started]: https://github.com/gruntjs/grunt/wiki/Getting-started
-
-
-## Documentation
-
-See the grunt [docs](https://github.com/gruntjs/grunt/wiki) on how to [configure tasks](https://github.com/gruntjs/grunt/wiki/Configuring-tasks) and more advanced usage.
-
-### Example
-
-```js
 grunt.initConfig({
-	eslint: {					// task
-		target: ['file.js']		// array of files
+	eslint: {
+		target: ['file.js']
 	}
 });
 
-grunt.loadNpmTasks('grunt-eslint');
 grunt.registerTask('default', ['eslint']);
 ```
 
-### Example with custom config and rules
+
+## Examples
+
+### Custom config and rules
 
 ```js
 grunt.initConfig({
-	eslint: {								// task
+	eslint: {
 		options: {
-			config: 'conf/eslint.json',		// custom config
-			rulesdir: ['conf/rules']		// custom rules
+			config: 'conf/eslint.json',
+			rulesdir: ['conf/rules']
 		},
-		target: ['file.js']					// array of files
+		target: ['file.js']
 	}
 });
-
-grunt.loadNpmTasks('grunt-eslint');
-grunt.registerTask('default', ['eslint']);
 ```
 
-### Example with custom formatter
+### Custom formatter
 
 ```js
 grunt.initConfig({
-	eslint: {								// task
+	eslint: {
 		options: {
 			format: require('eslint-tap')
 		},
-		target: ['file.js']					// array of files
+		target: ['file.js']
 	}
 });
-
-grunt.loadNpmTasks('grunt-eslint');
-grunt.registerTask('default', ['eslint']);
 ```
 
 
-### Options
+## Options
 
-#### config
+### config
 
 Type: `string`  
 Default: [built-in eslint.json](https://github.com/iancmyers/eslint-grunt/blob/master/tasks/conf/eslint.json)
 
 Path to your [ESLint config file](https://github.com/nzakas/eslint/blob/master/docs/rules/README.md) (`eslint.json`).
 
-#### rulesdir
+### rulesdir
 
 Type: `array`  
 Default: [built-in rules directory](https://github.com/nzakas/eslint/tree/master/lib/rules)
@@ -94,7 +75,7 @@ Paths to directories with custom rules. Your custom rules will be used in additi
 
 Recommended read: [Working with Rules](https://github.com/nzakas/eslint/blob/master/docs/developer-guide/working-with-rules.md)
 
-#### format
+### format
 
 Type: `string`  
 Default: `'stylish'`
