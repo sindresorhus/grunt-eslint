@@ -1,6 +1,6 @@
 {
   "name": "grunt-eslint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate files with ESLint - A tool for identifying and reporting on patterns in JavaScript",
   "license": "MIT",
   "repository": "sindresorhus/grunt-eslint",
