@@ -15,6 +15,10 @@ module.exports = function (grunt) {
 		options._ = this.filesSrc; // set positional arguments
 		options.config = options.config ? path.resolve(options.config) : '';
 
-		return eslint.execute(options) === 0;
+		try {
+			return eslint.execute(options) === 0;
+		} catch (err) {
+			grunt.warn(err);
+		}
 	});
 };
