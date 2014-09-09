@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "chalk": "^0.5.1",
-    "eslint": "^0.7.4"
+    "eslint": "^0.8.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
