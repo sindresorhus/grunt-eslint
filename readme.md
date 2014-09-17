@@ -62,7 +62,7 @@ grunt.initConfig({
 ### config
 
 Type: `string`  
-Default: [built-in eslint.json](https://github.com/iancmyers/eslint-grunt/blob/master/tasks/conf/eslint.json)
+Default: [built-in eslint.json](https://github.com/sindresorhus/grunt-eslint/blob/master/conf/eslint.json)
 
 Path to your [ESLint config file](https://github.com/nzakas/eslint/blob/master/docs/rules/README.md) (`eslint.json`).
 
