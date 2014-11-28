@@ -6,6 +6,8 @@ var eslint = require('eslint').cli;
 module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
 		var options = this.options();
+		var force = options.force;
+		delete options.force;
 
 		if (this.filesSrc.length === 0) {
 			grunt.log.writeln(chalk.magenta('Couldn\'t find any files to validate.'));
@@ -17,7 +19,7 @@ module.exports = function (grunt) {
 
 		try {
 			var result = eslint.execute(options);
-			return options.force ? 0 : result;
+			return force ? 0 : result;
 		} catch (err) {
 			grunt.warn(err);
 		}
