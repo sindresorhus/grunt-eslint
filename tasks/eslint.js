@@ -16,7 +16,8 @@ module.exports = function (grunt) {
 		options.config = options.config ? path.resolve(options.config) : '';
 
 		try {
-			return eslint.execute(options) === 0;
+			var result = eslint.execute(options);
+			return options.force ? 0 : result;
 		} catch (err) {
 			grunt.warn(err);
 		}
