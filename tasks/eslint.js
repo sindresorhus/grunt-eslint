@@ -62,15 +62,15 @@ module.exports = function (grunt) {
 		var options = this.options();
 		var eslintConfig = {
 			configFile: options.config ? path.resolve(options.config) : null,
-			envs: options.env || [],
-			extensions: options.extensions || ['*.js'],
-			globals: options.globals || [],
-			ignore: options.ignore || true,
-			ignorePath: options.ignorePath || null,
-			reset: options.reset || false,
-			rulePaths: options.rulesdir || [],
-			rules: options.rules || null,
-			useEslintrc: options.useEslintrc || false
+			envs: options.env,
+			extensions: options.extensions,
+			globals: options.globals,
+			ignore: options.ignore,
+			ignorePath: options.ignorePath,
+			reset: options.reset,
+			rulePaths: options.rulesdir,
+			rules: options.rules,
+			useEslintrc: options.useEslintrc
 		};
 
 		if (this.filesSrc.length === 0) {
