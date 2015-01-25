@@ -73,6 +73,14 @@ Name of a [built-in formatter](https://github.com/nzakas/eslint/tree/master/lib/
 Some formatters you might find useful: [eslint-json](https://github.com/sindresorhus/eslint-json), [eslint-tap](https://github.com/sindresorhus/eslint-tap).
 
 
+### outputFile
+
+Type: `boolean`  
+Default: `false`
+
+Output the report to a file.
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)

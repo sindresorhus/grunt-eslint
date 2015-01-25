@@ -14,6 +14,7 @@ function calculateExitCode(results) {
 module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
 		var opts = this.options({
+			outputFile: false,
 			format: 'stylish'
 		});
 
@@ -40,7 +41,14 @@ module.exports = function (grunt) {
 			return;
 		}
 
-		console.log(formatter(results));
+		var output = formatter(results);
+
+		if (opts.outputFile) {
+			grunt.file.write(opts.outputFile, output);
+		} else {
+			console.log(output);
+		}
+
 		return calculateExitCode(results) === 0;
 	});
 };
