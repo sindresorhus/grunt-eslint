@@ -40,7 +40,12 @@ module.exports = function (grunt) {
 			return;
 		}
 
-		console.log(formatter(results));
+		var formattedResults = formatter(results);
+		if (opts['output-file']) {
+			grunt.file.write(opts['output-file'], formattedResults);
+		} else {
+			console.log(formattedResults);
+		}
 		return calculateExitCode(results) === 0;
 	});
 };
