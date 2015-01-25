@@ -61,7 +61,7 @@ grunt.initConfig({
 
 See the [ESLint options](http://eslint.org/docs/developer-guide/nodejs-api#cliengine).
 
-In addition the following option is supported:
+In addition the following options are supported:
 
 ### format
 
