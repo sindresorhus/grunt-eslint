@@ -3,8 +3,8 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		eslint: {
 			options: {
-				config: 'conf/eslint.json',
-				rulesdir: ['conf/rules']
+				configFile: 'conf/eslint.json',
+				rulePaths: ['conf/rules']
 			},
 			validate: ['test/fixture/{1,2}.js']
 		},

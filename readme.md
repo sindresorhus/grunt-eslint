@@ -1,13 +1,13 @@
 # grunt-eslint [![Build Status](https://travis-ci.org/sindresorhus/grunt-eslint.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-eslint)
 
-> Validate files with [ESLint](https://github.com/nzakas/eslint)
+> Validate files with [ESLint](http://eslint.org)
 
-![screenshot](screenshot.png)
+![](screenshot.png)
 
 
 ## Install
 
-```sh
+```
 $ npm install --save-dev grunt-eslint
 ```
 
@@ -35,8 +35,8 @@ grunt.registerTask('default', ['eslint']);
 grunt.initConfig({
 	eslint: {
 		options: {
-			config: 'conf/eslint.json',
-			rulesdir: ['conf/rules']
+			configFile: 'conf/eslint.json',
+			rulePaths: ['conf/rules']
 		},
 		target: ['file.js']
 	}
@@ -59,21 +59,9 @@ grunt.initConfig({
 
 ## Options
 
-### config
+See the [ESLint options](http://eslint.org/docs/developer-guide/nodejs-api#cliengine).
 
-Type: `string`  
-Default: [built-in eslint.json](conf/eslint.json)
-
-Path to your [ESLint config file](https://github.com/nzakas/eslint/blob/master/docs/rules/README.md) (`eslint.json`).
-
-### rulesdir
-
-Type: `array`  
-Default: [built-in rules directory](https://github.com/nzakas/eslint/tree/master/lib/rules)
-
-Paths to directories with custom rules. Your custom rules will be used in addition to the built-in ones.
-
-Recommended read: [Working with Rules](https://github.com/nzakas/eslint/blob/master/docs/developer-guide/working-with-rules.md)
+In addition the following option is supported:
 
 ### format
 

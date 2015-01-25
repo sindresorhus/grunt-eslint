@@ -1,24 +1,46 @@
 'use strict';
-var path = require('path');
 var chalk = require('chalk');
-var eslint = require('eslint').cli;
+var eslint = require('eslint');
+
+// https://github.com/eslint/eslint/blob/18246e5e114ebac170620638949b2ab8ebc6df47/lib/cli.js#L115
+function calculateExitCode(results) {
+	return results.some(function (result) {
+		return result.messages.some(function (message) {
+			return message.severity === 2;
+		});
+	}) ? 1 : 0;
+}
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
-		var options = this.options();
+		var opts = this.options({
+			format: 'stylish'
+		});
+
+		// legacy
+		// TODO: remove in the future
+		if (opts.config) {
+			opts.configFile = opts.config;
+		}
+		if (opts.rulesdir) {
+			opts.rulePaths = opts.rulesdir;
+		}
 
 		if (this.filesSrc.length === 0) {
-			grunt.log.writeln(chalk.magenta('Couldn\'t find any files to validate.'));
+			grunt.log.writeln(chalk.magenta('Could not find any files to validate.'));
 			return;
 		}
 
-		options._ = this.filesSrc; // set positional arguments
-		options.config = options.config ? path.resolve(options.config) : '';
+		var engine = new eslint.CLIEngine(opts);
+		var results = engine.executeOnFiles(this.filesSrc).results;
+		var formatter = engine.getFormatter(opts.format);
 
-		try {
-			return eslint.execute(options) === 0;
-		} catch (err) {
-			grunt.warn(err);
+		if (!formatter) {
+			grunt.warn('Could not find formatter ' + opts.format + '\'.');
+			return;
 		}
+
+		console.log(formatter(results));
+		return calculateExitCode(results) === 0;
 	});
 };
