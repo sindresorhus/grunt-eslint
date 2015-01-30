@@ -6,6 +6,12 @@ module.exports = function (grunt) {
 				configFile: 'conf/eslint.json',
 				rulePaths: ['conf/rules']
 			},
+			forced: {
+				options: {
+					force: true
+				},
+				src: ['test/fixture/{1,2}.js']
+			},
 			validate: ['test/fixture/{1,2}.js']
 		},
 		shell: {

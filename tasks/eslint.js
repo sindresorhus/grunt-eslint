@@ -17,6 +17,7 @@ module.exports = function (grunt) {
 			outputFile: false,
 			format: 'stylish'
 		});
+		var force = false;
 
 		// legacy
 		// TODO: remove in the future
@@ -25,6 +26,10 @@ module.exports = function (grunt) {
 		}
 		if (opts.rulesdir) {
 			opts.rulePaths = opts.rulesdir;
+		}
+		if (opts.force) {
+			force = true;
+			delete opts.force;
 		}
 
 		if (this.filesSrc.length === 0) {
@@ -49,6 +54,6 @@ module.exports = function (grunt) {
 			console.log(output);
 		}
 
-		return calculateExitCode(results) === 0;
+		return force ? 0 : calculateExitCode(results) === 0;
 	});
 };

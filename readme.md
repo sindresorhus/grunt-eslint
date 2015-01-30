@@ -80,6 +80,12 @@ Default: `false`
 
 Output the report to a file.
 
+### force
+
+Type: `boolean`
+Default: `false`
+
+Set `force` to `true` to report ESLint errors but not fail the task. 
 
 ## License
 
