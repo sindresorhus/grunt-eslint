@@ -4,7 +4,8 @@ module.exports = function (grunt) {
 		eslint: {
 			options: {
 				configFile: 'conf/eslint.json',
-				rulePaths: ['conf/rules']
+				rulePaths: ['conf/rules'],
+				quiet: true
 			},
 			validate: ['test/fixture/{1,2}.js']
 		},
@@ -14,7 +15,7 @@ module.exports = function (grunt) {
 				options: {
 					callback: function (err, stdout, stderr, cb) {
 						if (/test\/fixture\/1\.js/.test(stdout)) {
-							if (!/camelcase/.test(stdout)) {
+							if (!/camelcase/.test(stdout) && !/\swarning\s/.test(stdout)) {
 								cb();
 							} else {
 								cb(false);
