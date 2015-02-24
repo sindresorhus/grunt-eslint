@@ -29,7 +29,7 @@
     "esprima"
   ],
   "dependencies": {
-    "chalk": "^0.5.1",
+    "chalk": "^1.0.0",
     "eslint": "^0.15.0"
   },
   "devDependencies": {
