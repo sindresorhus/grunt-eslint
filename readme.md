@@ -75,8 +75,8 @@ Some formatters you might find useful: [eslint-json](https://github.com/sindreso
 
 ### outputFile
 
-Type: `boolean`  
-Default: `false`
+Type: `string`  
+Default: `''`
 
 Output the report to a file.
 
