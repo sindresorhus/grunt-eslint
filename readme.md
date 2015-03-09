@@ -19,7 +19,7 @@ require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
 grunt.initConfig({
 	eslint: {
-		target: ['file.js']
+		src: ['js/*.js']
 	}
 });
 
@@ -38,7 +38,7 @@ grunt.initConfig({
 			configFile: 'conf/eslint.json',
 			rulePaths: ['conf/rules']
 		},
-		target: ['file.js']
+		src: ['js/*.js']
 	}
 });
 ```
@@ -51,7 +51,7 @@ grunt.initConfig({
 		options: {
 			format: require('eslint-tap')
 		},
-		target: ['file.js']
+		src: ['js/*.js']
 	}
 });
 ```
@@ -75,10 +75,10 @@ Some formatters you might find useful: [eslint-json](https://github.com/sindreso
 
 ### outputFile
 
-Type: `boolean`  
+Type: `boolean/string`  
 Default: `false`
 
-Output the report to a file.
+Output the report to a file with a given filename.
 
 
 ### quiet
