@@ -44,7 +44,15 @@ module.exports = function (grunt) {
 		}
 
 		var engine = new eslint.CLIEngine(opts);
-		var report = engine.executeOnFiles(this.filesSrc);
+
+		var report;
+		try {
+			report = engine.executeOnFiles(this.filesSrc);
+		} catch (err) {
+			grunt.warn(err);
+			return;
+		}
+
 		var results = report.results;
 
 		if (opts.quiet) {
