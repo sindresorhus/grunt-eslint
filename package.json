@@ -1,6 +1,6 @@
 {
   "name": "grunt-eslint",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "description": "Validate files with ESLint",
   "license": "MIT",
   "repository": "sindresorhus/grunt-eslint",
