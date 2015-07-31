@@ -14,8 +14,8 @@ module.exports = function (grunt) {
 				command: 'grunt eslint',
 				options: {
 					callback: function (err, stdout, stderr, cb) {
-						if (/test\/fixture\/1\.js/.test(stdout)) {
-							if (!/camelcase/.test(stdout) && !/\swarning\s/.test(stdout)) {
+						if (/test\/fixture\/2\.js/.test(stdout)) {
+							if (/camelcase/.test(stdout) && !/\swarning\s/.test(stdout)) {
 								cb();
 							} else {
 								cb(false);
