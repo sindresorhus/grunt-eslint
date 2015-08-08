@@ -1,1 +1,1 @@
-var hello_worl = 'foo';
+var hello_world = 'foo';
