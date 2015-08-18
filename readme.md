@@ -89,6 +89,14 @@ Default: `false`
 Report errors only.
 
 
+### failOnWarnings
+
+Type: `boolean`  
+Default: `false`
+
+Fail the task when warnings are found.
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
