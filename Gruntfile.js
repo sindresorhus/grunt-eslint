@@ -5,7 +5,8 @@ module.exports = function (grunt) {
 			options: {
 				configFile: 'conf/eslint.json',
 				rulePaths: ['conf/rules'],
-				quiet: true
+				quiet: true,
+				failOnWarnings: false
 			},
 			validate: ['test/fixture/{1,2}.js']
 		},

@@ -6,7 +6,8 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
 		var opts = this.options({
 			outputFile: false,
-			quiet: false
+			quiet: false,
+			failOnWarnings: false
 		});
 
 		// legacy
@@ -54,6 +55,6 @@ module.exports = function (grunt) {
 			console.log(output);
 		}
 
-		return report.errorCount === 0;
+		return report.errorCount === 0 && (!opts.failOnWarnings || report.warningCount === 0);
 	});
 };
