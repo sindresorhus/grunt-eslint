@@ -40,6 +40,10 @@ module.exports = function (grunt) {
 			return false;
 		}
 
+		if (opts.fix) {
+			eslint.CLIEngine.outputFixes(report);
+		}
+
 		var results = report.results;
 
 		if (opts.quiet) {
