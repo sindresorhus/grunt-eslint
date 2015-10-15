@@ -61,10 +61,10 @@ module.exports = function (grunt) {
 
 		var tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;
 
-		if (!report.errorCount && tooManyWarnings) {
-			console.error("ESLint found too many warnings (maximum: %s).", opts.maxWarnings);
+		if (report.errorCount === 0 && tooManyWarnings > 0) {
+			console.error('ESLint found too many warnings (maximum: %s)', opts.maxWarnings);
 		}
 
-		return (report.errorCount || tooManyWarnings) ? 1 : 0;
+		return (report.errorCount > 0 || tooManyWarnings > 0) ? 1 : 0;
 	});
 };

@@ -92,9 +92,9 @@ Report errors only.
 ### maxWarnings
 
 Type: `number`  
-Default: `-1`
+Default: `-1` *(means no limit)*
 
-Number of warnings to trigger nonzero exit code (-1 means no limit)
+Number of warnings to trigger non-zero exit code.
 
 
 ## License
