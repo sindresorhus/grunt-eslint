@@ -89,6 +89,14 @@ Default: `false`
 Report errors only.
 
 
+### maxWarnings
+
+Type: `number`  
+Default: `-1`
+
+Number of warnings to trigger nonzero exit code (-1 means no limit)
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
