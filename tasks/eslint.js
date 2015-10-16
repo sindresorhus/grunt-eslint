@@ -58,6 +58,10 @@ module.exports = function (grunt) {
 		} else {
 			console.log(output);
 		}
+		
+		if(opts.silent){
+            return true;
+        }
 
 		var tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;
 
