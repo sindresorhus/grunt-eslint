@@ -46,6 +46,7 @@ module.exports = function (grunt) {
 		}
 
 		var results = report.results;
+		var numFiles = results.length;
 
 		if (opts.quiet) {
 			results = eslint.CLIEngine.getErrorResults(results);
@@ -55,16 +56,24 @@ module.exports = function (grunt) {
 
 		if (opts.outputFile) {
 			grunt.file.write(opts.outputFile, output);
-		} else {
+		} else if (output) {
 			console.log(output);
+		}
+
+		if (report.errorCount !== 0) {
+			return false;
 		}
 
 		var tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;
 
-		if (report.errorCount === 0 && tooManyWarnings) {
+		if (tooManyWarnings) {
 			grunt.warn('ESLint found too many warnings (maximum:' + opts.maxWarnings + ')');
 		}
 
-		return report.errorCount === 0;
+		if (!output) { // there were no errors and no output warnings
+			grunt.log.ok(numFiles + ' ' + grunt.util.pluralize(numFiles, 'file/files') + ' lint free.');
+		}
+
+		return true;
 	});
 };
