@@ -29,8 +29,10 @@
     "esprima"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
-    "eslint": "^1.5.1"
+    "chalk": "^1.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^2.0.0-rc.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
