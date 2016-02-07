@@ -29,10 +29,13 @@
     "esprima"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
-    "eslint": "^1.5.1"
+    "chalk": "^1.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^2.0.0-rc.0"
   },
   "devDependencies": {
+    "eslint": "^2.0.0-rc.0",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-shell": "^1.1.1"
