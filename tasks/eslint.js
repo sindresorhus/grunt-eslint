@@ -56,7 +56,9 @@ module.exports = function (grunt) {
 		if (opts.outputFile) {
 			grunt.file.write(opts.outputFile, output);
 		} else {
-			console.log(output);
+			if (output.length !== 0) {
+				console.log(output)
+			}
 		}
 
 		var tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;
