@@ -55,7 +55,7 @@ module.exports = function (grunt) {
 
 		if (opts.outputFile) {
 			grunt.file.write(opts.outputFile, output);
-		} else {
+		} else if (output) {
 			console.log(output);
 		}
 
