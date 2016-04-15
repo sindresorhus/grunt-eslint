@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 
 		if (this.filesSrc.length === 0) {
 			grunt.log.writeln(chalk.magenta('Could not find any files to validate.'));
-			return false;
+			return true;
 		}
 
 		var formatter = eslint.CLIEngine.getFormatter(opts.format);
