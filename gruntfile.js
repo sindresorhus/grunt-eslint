@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function (grunt) {
+module.exports = grunt => {
 	grunt.initConfig({
 		eslint: {
 			options: {
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 			eslint: {
 				command: 'grunt eslint',
 				options: {
-					callback: function (err, stdout, stderr, cb) {
+					callback: (err, stdout, stderr, cb) => {
 						if (/test\/fixture\/2\.js/.test(stdout)) {
 							if (/camelcase/.test(stdout) && !/\swarning\s/.test(stdout)) {
 								cb();

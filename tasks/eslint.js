@@ -1,10 +1,10 @@
 'use strict';
-var chalk = require('chalk');
-var eslint = require('eslint');
+const chalk = require('chalk');
+const eslint = require('eslint');
 
-module.exports = function (grunt) {
+module.exports = grunt => {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
-		var opts = this.options({
+		const opts = this.options({
 			outputFile: false,
 			quiet: false,
 			maxWarnings: -1
@@ -20,20 +20,20 @@ module.exports = function (grunt) {
 		}
 
 		if (this.filesSrc.length === 0) {
-			grunt.log.writeln(chalk.magenta('Could not find any files to validate.'));
+			grunt.log.writeln(chalk.magenta('Could not find any files to validate'));
 			return true;
 		}
 
-		var formatter = eslint.CLIEngine.getFormatter(opts.format);
+		const formatter = eslint.CLIEngine.getFormatter(opts.format);
 
 		if (!formatter) {
-			grunt.warn('Could not find formatter ' + opts.format + '\'.');
+			grunt.warn(`Could not find formatter ${opts.format}`);
 			return false;
 		}
 
-		var engine = new eslint.CLIEngine(opts);
+		const engine = new eslint.CLIEngine(opts);
 
-		var report;
+		let report;
 		try {
 			report = engine.executeOnFiles(this.filesSrc);
 		} catch (err) {
@@ -45,13 +45,13 @@ module.exports = function (grunt) {
 			eslint.CLIEngine.outputFixes(report);
 		}
 
-		var results = report.results;
+		let results = report.results;
 
 		if (opts.quiet) {
 			results = eslint.CLIEngine.getErrorResults(results);
 		}
 
-		var output = formatter(results);
+		const output = formatter(results);
 
 		if (opts.outputFile) {
 			grunt.file.write(opts.outputFile, output);
@@ -59,10 +59,10 @@ module.exports = function (grunt) {
 			console.log(output);
 		}
 
-		var tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;
+		const tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;
 
 		if (report.errorCount === 0 && tooManyWarnings) {
-			grunt.warn('ESLint found too many warnings (maximum:' + opts.maxWarnings + ')');
+			grunt.warn(`ESLint found too many warnings (maximum: ${opts.maxWarnings})`);
 		}
 
 		return report.errorCount === 0;
