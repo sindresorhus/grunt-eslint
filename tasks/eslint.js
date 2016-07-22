@@ -55,7 +55,14 @@ module.exports = grunt => {
 		if (report.errorCount === 0 && tooManyWarnings) {
 			grunt.warn(`ESLint found too many warnings (maximum: ${opts.maxWarnings})`);
 		}
+		
+		let totalViolationCount;
+		if (opts.quiet) {
+			totalViolationCount = report.errorCount;
+		} else {
+			totalViolationCount = report.errorCount + report.warningCount;
+		}
 
-		return report.errorCount === 0;
+		return totalViolationCount === 0;
 	});
 };
