@@ -93,6 +93,13 @@ Default: `-1` *(means no limit)*
 
 Number of warnings to trigger non-zero exit code.
 
+### console
+
+Type: `boolean`<br>
+Default: `false`
+
+Output the report to console in addition to writing to file.
+
 
 ## License
 
