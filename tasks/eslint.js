@@ -49,7 +49,7 @@ module.exports = grunt => {
 			console.log("Writing lint results to " + opts.outputFile);
 		}
 
-		if (!opts.outputFile || opts.console) {
+		if (!opts.outputFile || opts.stdout) {
 			const consoleFormatter = eslint.CLIEngine.getFormatter();
 			const consoleOutput = consoleFormatter(results);
 			console.log(consoleOutput);
