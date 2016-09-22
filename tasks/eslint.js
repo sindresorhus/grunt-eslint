@@ -46,8 +46,13 @@ module.exports = grunt => {
 
 		if (opts.outputFile) {
 			grunt.file.write(opts.outputFile, output);
-		} else if (output) {
-			console.log(output);
+			console.log("Writing lint results to " + opts.outputFile);
+		}
+
+		if (!opts.outputFile || opts.stdout) {
+			const consoleFormatter = eslint.CLIEngine.getFormatter();
+			const consoleOutput = consoleFormatter(results);
+			console.log(consoleOutput);
 		}
 
 		const tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;

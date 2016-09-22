@@ -93,6 +93,13 @@ Default: `-1` *(means no limit)*
 
 Number of warnings to trigger non-zero exit code.
 
+### stdout
+
+Type: `boolean`<br>
+Default: `false`
+
+Output the report to standard output in addition to writing to file.
+
 
 ## License
 
