@@ -49,6 +49,10 @@ module.exports = grunt => {
 		} else if (output) {
 			console.log(output);
 		}
+		
+		if(opts.silent){
+            return true;
+        }
 
 		const tooManyWarnings = opts.maxWarnings >= 0 && report.warningCount > opts.maxWarnings;
 
