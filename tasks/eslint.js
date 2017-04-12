@@ -56,6 +56,9 @@ module.exports = grunt => {
 			grunt.warn(`ESLint found too many warnings (maximum: ${opts.maxWarnings})`);
 		}
 
+		if ( report.errorCount === 0 ) {
+			grunt.log.ok( 'Linted ' + this.filesSrc.length + ' files without errors' );
+		}
 		return report.errorCount === 0;
 	});
 };
