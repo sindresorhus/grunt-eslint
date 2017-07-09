@@ -37,9 +37,6 @@
     "grunt-cli": "^1.2.0",
     "grunt-shell": "^1.1.1"
   },
-  "peerDependencies": {
-    "grunt": ">=0.4.0"
-  },
   "xo": {
     "esnext": true
   }
