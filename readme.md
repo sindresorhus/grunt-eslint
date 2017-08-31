@@ -1,6 +1,6 @@
 # grunt-eslint [![Build Status](https://travis-ci.org/sindresorhus/grunt-eslint.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-eslint)
 
-> Validate files with [ESLint](http://eslint.org)
+> Validate files with [ESLint](https://eslint.org)
 
 ![](screenshot.png)
 

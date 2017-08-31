@@ -1,46 +1,43 @@
 {
-  "name": "grunt-eslint",
-  "version": "20.0.0",
-  "description": "Validate files with ESLint",
-  "license": "MIT",
-  "repository": "sindresorhus/grunt-eslint",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "grunt"
-  },
-  "files": [
-    "tasks"
-  ],
-  "keywords": [
-    "gruntplugin",
-    "lint",
-    "validate",
-    "report",
-    "jshint",
-    "jslint",
-    "ecmascript",
-    "esprima"
-  ],
-  "dependencies": {
-    "chalk": "^2.1.0",
-    "eslint": "^4.0.0"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-shell": "^1.1.1"
-  },
-  "peerDependencies": {
-    "grunt": ">=0.4.0"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "grunt-eslint",
+	"version": "20.0.0",
+	"description": "Validate files with ESLint",
+	"license": "MIT",
+	"repository": "sindresorhus/grunt-eslint",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "grunt"
+	},
+	"files": [
+		"tasks"
+	],
+	"keywords": [
+		"gruntplugin",
+		"lint",
+		"validate",
+		"report",
+		"jshint",
+		"jslint",
+		"ecmascript",
+		"esprima"
+	],
+	"dependencies": {
+		"chalk": "^2.1.0",
+		"eslint": "^4.0.0"
+	},
+	"devDependencies": {
+		"grunt": "^1.0.1",
+		"grunt-cli": "^1.2.0",
+		"grunt-shell": "^2.1.0"
+	},
+	"peerDependencies": {
+		"grunt": ">=0.4.0"
+	}
 }
