@@ -7,7 +7,8 @@ module.exports = grunt => {
 		const opts = this.options({
 			outputFile: false,
 			quiet: false,
-			maxWarnings: -1
+			maxWarnings: -1,
+			failOnError: true,
 		});
 
 		if (this.filesSrc.length === 0) {
@@ -56,6 +57,6 @@ module.exports = grunt => {
 			grunt.warn(`ESLint found too many warnings (maximum: ${opts.maxWarnings})`);
 		}
 
-		return report.errorCount === 0;
+		return failOnError ? report.errorCount === 0 : 0;
 	});
 };

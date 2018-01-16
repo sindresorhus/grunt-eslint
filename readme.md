@@ -93,6 +93,13 @@ Default: `-1` *(means no limit)*
 
 Number of warnings to trigger non-zero exit code.
 
+### failOnError
+
+Type: `boolean`<br>
+Default: `true`
+
+If the build should fail if any error is found.
+
 
 ## License
 
