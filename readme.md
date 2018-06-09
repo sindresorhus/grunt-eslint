@@ -11,11 +11,15 @@
 $ npm install --save-dev grunt-eslint
 ```
 
+<a href="https://www.patreon.com/sindresorhus">
+	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
 
 ## Usage
 
 ```js
-require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
+require('load-grunt-tasks')(grunt);
 
 grunt.initConfig({
 	eslint: {
@@ -59,7 +63,7 @@ grunt.initConfig({
 
 ## Options
 
-See the [ESLint options](http://eslint.org/docs/developer-guide/nodejs-api#cliengine).
+See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#cliengine).
 
 In addition the following options are supported:
 
