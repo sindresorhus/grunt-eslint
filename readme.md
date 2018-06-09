@@ -98,7 +98,7 @@ Number of warnings to trigger non-zero exit code.
 Type: `boolean`<br>
 Default: `true`
 
-If the build should fail if any error is found.
+Fail the build if ESLint found any errors.
 
 
 ## License
