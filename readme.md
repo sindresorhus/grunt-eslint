@@ -93,6 +93,13 @@ Default: `-1` *(means no limit)*
 
 Number of warnings to trigger non-zero exit code.
 
+### failOnError
+
+Type: `boolean`<br>
+Default: `true`
+
+Fail the build if ESLint found any errors.
+
 
 ## License
 
