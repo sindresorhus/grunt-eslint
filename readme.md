@@ -11,10 +11,6 @@
 $ npm install --save-dev grunt-eslint
 ```
 
-<a href="https://www.patreon.com/sindresorhus">
-	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
-
 
 ## Usage
 
@@ -93,7 +89,7 @@ Report errors only.
 ### maxWarnings
 
 Type: `number`<br>
-Default: `-1` *(means no limit)*
+Default: `-1` *(Means no limit)*
 
 Number of warnings to trigger non-zero exit code.
 
@@ -103,8 +99,3 @@ Type: `boolean`<br>
 Default: `true`
 
 Fail the build if ESLint found any errors.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
