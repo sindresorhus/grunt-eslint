@@ -10,7 +10,7 @@
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"scripts": {
 		"test": "grunt"
@@ -20,22 +20,19 @@
 	],
 	"keywords": [
 		"gruntplugin",
+		"eslint",
 		"lint",
 		"validate",
-		"report",
-		"jshint",
-		"jslint",
-		"ecmascript",
-		"esprima"
+		"report"
 	],
 	"dependencies": {
 		"chalk": "^2.1.0",
-		"eslint": "^5.16.0"
+		"eslint": "^6.0.1"
 	},
 	"devDependencies": {
 		"grunt": "^1.0.1",
 		"grunt-cli": "^1.2.0",
-		"grunt-shell": "^2.1.0"
+		"grunt-shell": "^3.0.1"
 	},
 	"peerDependencies": {
 		"grunt": ">=1"
