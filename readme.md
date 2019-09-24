@@ -56,10 +56,25 @@ grunt.initConfig({
 });
 ```
 
+### Base config
+
+```js
+grunt.initConfig({
+	eslint: {
+		options: {
+			baseConfig: {
+				extends: ["eslint-config-shared"]
+			}
+		},
+		target: ['file.js']
+	}
+});
+```
 
 ## Options
 
 See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#cliengine).
+
 
 In addition the following options are supported:
 
