@@ -9,7 +9,14 @@ module.exports = grunt => {
 			quiet: false,
 			maxWarnings: -1,
 			failOnError: true,
+			extends: false
 		});
+
+		if (options.extends) {
+			options.baseConfig = Object.assign({
+				extends: options.extends
+			}, options.baseConfig);
+		}
 
 		if (this.filesSrc.length === 0) {
 			grunt.log.writeln(chalk.magenta('Could not find any files to validate'));

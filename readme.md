@@ -56,15 +56,14 @@ grunt.initConfig({
 });
 ```
 
-### Base config
+
+### Shareable Configs
 
 ```js
 grunt.initConfig({
 	eslint: {
 		options: {
-			baseConfig: {
-				extends: ["eslint-config-shared"]
-			}
+			extends: ['eslint-config-shared']
 		},
 		target: ['file.js']
 	}
@@ -114,3 +113,10 @@ Type: `boolean`<br>
 Default: `true`
 
 Fail the build if ESLint found any errors.
+
+### extends
+
+Type: `string` | `array`<br>
+Default: `''`
+
+Module name(s) of [shareable config](https://eslint.org/docs/developer-guide/shareable-configs).
