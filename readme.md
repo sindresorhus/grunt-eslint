@@ -56,7 +56,6 @@ grunt.initConfig({
 });
 ```
 
-
 ### Shareable Configs
 
 ```js
