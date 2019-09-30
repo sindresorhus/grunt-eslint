@@ -8,14 +8,14 @@ module.exports = grunt => {
 			outputFile: false,
 			quiet: false,
 			maxWarnings: -1,
-			failOnError: true,
-			extends: false
+			failOnError: true
 		});
 
 		if (options.extends) {
-			options.baseConfig = Object.assign({
-				extends: options.extends
-			}, options.baseConfig);
+			options.baseConfig = {
+				extends: options.extends,
+				...baseConfig
+			};
 		}
 
 		if (this.filesSrc.length === 0) {

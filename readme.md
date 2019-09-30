@@ -116,6 +116,5 @@ Fail the build if ESLint found any errors.
 ### extends
 
 Type: `string` | `array`<br>
-Default: `''`
 
 Module name(s) of [shareable config](https://eslint.org/docs/developer-guide/shareable-configs).
