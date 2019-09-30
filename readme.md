@@ -73,7 +73,6 @@ grunt.initConfig({
 
 See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#cliengine).
 
-
 In addition the following options are supported:
 
 ### format
