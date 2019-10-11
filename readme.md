@@ -68,7 +68,7 @@ In addition the following options are supported:
 Type: `string`<br>
 Default: `'stylish'`
 
-Name of a [built-in formatter](https://github.com/nzakas/eslint/tree/master/lib/formatters) or path to a custom one.
+Name of a [built-in formatter](https://github.com/eslint/eslint/tree/master/lib/cli-engine/formatters) or path to a custom one.
 
 Some formatters you might find useful: [eslint-json](https://github.com/sindresorhus/eslint-json), [eslint-tap](https://github.com/sindresorhus/eslint-tap).
 
