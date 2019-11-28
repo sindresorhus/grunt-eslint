@@ -99,3 +99,10 @@ Type: `boolean`<br>
 Default: `true`
 
 Fail the build if ESLint found any errors.
+
+### fix
+
+Type: `boolean`<br>
+Default: `false`
+
+Enable errors auto-fixing.
