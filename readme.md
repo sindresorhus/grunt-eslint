@@ -1,16 +1,14 @@
-# grunt-eslint [![Build Status](https://travis-ci.org/sindresorhus/grunt-eslint.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-eslint)
+# grunt-eslint [![Build Status](https://travis-ci.com/sindresorhus/grunt-eslint.svg?branch=master)](https://travis-ci.com/github/sindresorhus/grunt-eslint)
 
 > Validate files with [ESLint](https://eslint.org)
 
 ![](screenshot.png)
-
 
 ## Install
 
 ```
 $ npm install --save-dev grunt-eslint
 ```
-
 
 ## Usage
 
@@ -25,7 +23,6 @@ grunt.initConfig({
 
 grunt.registerTask('default', ['eslint']);
 ```
-
 
 ## Examples
 
@@ -56,7 +53,6 @@ grunt.initConfig({
 });
 ```
 
-
 ## Options
 
 See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#cliengine).
@@ -65,7 +61,7 @@ In addition the following options are supported:
 
 ### format
 
-Type: `string`<br>
+Type: `string`\
 Default: `'stylish'`
 
 Name of a [built-in formatter](https://github.com/eslint/eslint/tree/master/lib/cli-engine/formatters) or path to a custom one.
@@ -74,28 +70,28 @@ Some formatters you might find useful: [eslint-json](https://github.com/sindreso
 
 ### outputFile
 
-Type: `string`<br>
+Type: `string`\
 Default: `''`
 
 Output the report to a file.
 
 ### quiet
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `false`
 
 Report errors only.
 
 ### maxWarnings
 
-Type: `number`<br>
+Type: `number`\
 Default: `-1` *(Means no limit)*
 
 Number of warnings to trigger non-zero exit code.
 
 ### failOnError
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Fail the build if ESLint found any errors.
