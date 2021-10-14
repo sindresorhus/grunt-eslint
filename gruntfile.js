@@ -3,7 +3,7 @@ module.exports = grunt => {
 	grunt.initConfig({
 		eslint: {
 			options: {
-				configFile: 'conf/eslint.json',
+				overrideConfigFile: 'conf/eslint.json',
 				rulePaths: ['conf/rules'],
 				quiet: true
 			},
