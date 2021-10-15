@@ -32,7 +32,7 @@ grunt.registerTask('default', ['eslint']);
 grunt.initConfig({
 	eslint: {
 		options: {
-			configFile: 'conf/eslint.json',
+			overrideConfigFile: 'conf/eslint.json',
 			rulePaths: ['conf/rules']
 		},
 		target: ['file.js']
@@ -55,7 +55,7 @@ grunt.initConfig({
 
 ## Options
 
-See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#cliengine).
+See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#-new-eslintoptions).
 
 In addition the following options are supported:
 
