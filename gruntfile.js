@@ -13,15 +13,15 @@ module.exports = grunt => {
 			eslint: {
 				command: 'grunt eslint',
 				options: {
-					callback: (err, stdout, stderr, cb) => {
+					callback: (error, stdout, stderr, callback) => {
 						if (/test\/fixture\/2\.js/.test(stdout)) {
 							if (/camelcase/.test(stdout) && !/\swarning\s/.test(stdout)) {
-								cb();
+								callback();
 							} else {
-								cb(false);
+								callback(false);
 							}
 						} else {
-							cb(false);
+							callback(false);
 						}
 					}
 				}

@@ -6,8 +6,8 @@
 
 ## Install
 
-```
-$ npm install --save-dev grunt-eslint
+```sh
+npm install --save-dev grunt-eslint
 ```
 
 ## Usage
@@ -64,7 +64,7 @@ In addition the following options are supported:
 Type: `string`\
 Default: `'stylish'`
 
-Name of a [built-in formatter](https://github.com/eslint/eslint/tree/master/lib/cli-engine/formatters) or path to a custom one.
+The name of a [built-in formatter](https://github.com/eslint/eslint/tree/master/lib/cli-engine/formatters) or path to a custom one.
 
 Some formatters you might find useful: [eslint-json](https://github.com/sindresorhus/eslint-json), [eslint-tap](https://github.com/sindresorhus/eslint-tap).
 
@@ -87,7 +87,7 @@ Report errors only.
 Type: `number`\
 Default: `-1` *(Means no limit)*
 
-Number of warnings to trigger non-zero exit code.
+The nmber of warnings to trigger non-zero exit code.
 
 ### failOnError
 
