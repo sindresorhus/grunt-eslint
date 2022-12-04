@@ -25,7 +25,8 @@ module.exports = grunt => {
 
 				if (this.filesSrc.length === 0) {
 					grunt.log.writeln(chalk.magenta('Could not find any files to validate'));
-					return true;
+					done(true);
+					return;
 				}
 
 				const engine = new ESLint(options);
@@ -34,7 +35,8 @@ module.exports = grunt => {
 
 				if (!formatter) {
 					grunt.warn(`Could not find formatter ${format}`);
-					return false;
+					done(false);
+					return;
 				}
 
 				let results = await engine.lintFiles(this.filesSrc);
