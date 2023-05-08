@@ -49,7 +49,7 @@ module.exports = grunt => {
 					results = ESLint.getErrorResults(results);
 				}
 
-				const output = formatter.format(results);
+				const output = await formatter.format(results);
 
 				if (outputFile) {
 					grunt.file.write(outputFile, output);
