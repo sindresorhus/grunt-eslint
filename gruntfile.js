@@ -1,10 +1,13 @@
 'use strict';
+
+const noAlertRule = require('./conf/rules/no-alert');
+
 module.exports = grunt => {
 	grunt.initConfig({
 		eslint: {
 			options: {
-				overrideConfigFile: 'conf/eslint.json',
-				rulePaths: ['conf/rules'],
+				overrideConfigFile: 'conf/eslint.js',
+				plugins: { noAlertRule },
 				quiet: true
 			},
 			validate: ['test/fixture/{1,2}.js']

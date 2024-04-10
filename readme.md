@@ -29,11 +29,13 @@ grunt.registerTask('default', ['eslint']);
 ### Custom config and rules
 
 ```js
+const noAlertRule = require('./conf/rules/no-alert');
+
 grunt.initConfig({
 	eslint: {
 		options: {
-			overrideConfigFile: 'conf/eslint.json',
-			rulePaths: ['conf/rules']
+			overrideConfigFile: 'conf/eslint.js',
+			plugins: { noAlertRule }
 		},
 		target: ['file.js']
 	}
@@ -46,7 +48,7 @@ grunt.initConfig({
 grunt.initConfig({
 	eslint: {
 		options: {
-			format: require('eslint-tap')
+			format: './node_modules/eslint-tap/index.js'
 		},
 		target: ['file.js']
 	}
