@@ -35,7 +35,9 @@ grunt.initConfig({
 	eslint: {
 		options: {
 			overrideConfigFile: 'conf/eslint.js',
-			plugins: { noAlertRule }
+			plugins: {
+				noAlertRule
+			}
 		},
 		target: ['file.js']
 	}
