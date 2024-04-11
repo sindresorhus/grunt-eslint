@@ -7,7 +7,9 @@ module.exports = grunt => {
 		eslint: {
 			options: {
 				overrideConfigFile: 'conf/eslint.js',
-				plugins: { noAlertRule },
+				plugins: {
+					noAlertRule
+				},
 				quiet: true
 			},
 			validate: ['test/fixture/{1,2}.js']
