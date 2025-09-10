@@ -88,6 +88,19 @@ grunt.initConfig({
 
 This will output in checkstyle format to both the console and `eslint-results.xml`. To suppress console output and only write to the file, add `silent: true`.
 
+### Using feature flags
+
+```js
+grunt.initConfig({
+	eslint: {
+		options: {
+			flags: ['v10_config_lookup_from_file']
+		},
+		target: ['../project1/scripts/**/*.js']
+	}
+});
+```
+
 ## Options
 
 See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#-new-eslintoptions).
@@ -100,7 +113,13 @@ Type: `array` | `object`
 
 *Requires ESLint 9.22+*
 
-Array of shareable configs to extend.
+Shareable configs to extend.
+
+### flags
+
+Type: `array`
+
+[Feauture flags](https://eslint.org/docs/latest/flags/) to pass to ESLint.
 
 ### format
 
