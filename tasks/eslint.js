@@ -12,6 +12,7 @@ module.exports = grunt => {
 				const {
 					format,
 					quiet,
+					silent,
 					maxWarnings,
 					failOnError,
 					outputFile,
@@ -20,6 +21,7 @@ module.exports = grunt => {
 				} = this.options({
 					outputFile: false,
 					quiet: false,
+					silent: false,
 					maxWarnings: -1,
 					failOnError: true,
 					format: 'stylish'
@@ -64,7 +66,9 @@ module.exports = grunt => {
 
 				if (outputFile) {
 					grunt.file.write(outputFile, output);
-				} else if (output) {
+				}
+
+				if (output && !silent) {
 					console.log(output);
 				}
 

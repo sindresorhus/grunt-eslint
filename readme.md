@@ -72,6 +72,22 @@ grunt.initConfig({
 });
 ```
 
+### Output to both console and file
+
+```js
+grunt.initConfig({
+	eslint: {
+		options: {
+			outputFile: 'eslint-results.xml',
+			format: 'checkstyle'
+		},
+		target: ['file.js']
+	}
+});
+```
+
+This will output in checkstyle format to both the console and `eslint-results.xml`. To suppress console output and only write to the file, add `silent: true`.
+
 ## Options
 
 See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#-new-eslintoptions).
@@ -100,7 +116,7 @@ Some formatters you might find useful: [eslint-json](https://github.com/sindreso
 Type: `string`\
 Default: `''`
 
-Output the report to a file.
+Output the report to a file. When specified, the report is written to both the console and the file unless `silent` is true.
 
 ### quiet
 
@@ -108,6 +124,13 @@ Type: `boolean`\
 Default: `false`
 
 Report errors only.
+
+### silent
+
+Type: `boolean`\
+Default: `false`
+
+Suppress console output. When used with `outputFile`, only writes to the file.
 
 ### maxWarnings
 
