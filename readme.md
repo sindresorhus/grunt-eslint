@@ -44,6 +44,21 @@ grunt.initConfig({
 });
 ```
 
+### Using shared configs
+
+```js
+const js = require('@eslint/js');
+
+grunt.initConfig({
+	eslint: {
+		options: {
+			extends: [js.configs.recommended]
+		},
+		target: ['file.js']
+	}
+});
+```
+
 ### Custom formatter
 
 ```js
@@ -62,6 +77,14 @@ grunt.initConfig({
 See the [ESLint options](https://eslint.org/docs/developer-guide/nodejs-api#-new-eslintoptions).
 
 In addition the following options are supported:
+
+### extends
+
+Type: `array` | `object`
+
+*Requires ESLint 9.22+*
+
+Array of shareable configs to extend.
 
 ### format
 
@@ -91,7 +114,7 @@ Report errors only.
 Type: `number`\
 Default: `-1` *(Means no limit)*
 
-The nmber of warnings to trigger non-zero exit code.
+The number of warnings to trigger non-zero exit code.
 
 ### failOnError
 

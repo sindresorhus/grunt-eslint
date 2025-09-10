@@ -30,11 +30,40 @@ module.exports = grunt => {
 						}
 					}
 				}
+			},
+			'test-extends': {
+				command: 'grunt test-extends',
+				options: {
+					callback: (error, stdout, stderr, callback) => {
+						// Should detect no-undef and no-unused-vars from @eslint/js recommended
+						if (/no-undef/.test(stdout) || /no-unused-vars/.test(stdout)) {
+							callback();
+						} else {
+							callback(false);
+						}
+					}
+				}
 			}
 		}
 	});
 
 	grunt.loadTasks('tasks');
 	grunt.loadNpmTasks('grunt-shell');
-	grunt.registerTask('default', ['shell:eslint']);
+	
+	grunt.registerTask('test-extends', function() {
+		const js = require('@eslint/js');
+		
+		grunt.config.set('eslint.testExtends', {
+			options: {
+				overrideConfigFile: true,
+				extends: [js.configs.recommended],
+				quiet: true
+			},
+			src: ['test/fixture/{1,2}.js']
+		});
+		
+		grunt.task.run('eslint:testExtends');
+	});
+	
+	grunt.registerTask('default', ['shell:eslint', 'shell:test-extends']);
 };

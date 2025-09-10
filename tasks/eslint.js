@@ -1,6 +1,7 @@
 'use strict';
 const chalk = require('chalk');
 const {ESLint} = require('eslint');
+const {defineConfig} = require('eslint/config');
 
 module.exports = grunt => {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
@@ -14,6 +15,7 @@ module.exports = grunt => {
 					maxWarnings,
 					failOnError,
 					outputFile,
+					extends: extendsOption,
 					...options
 				} = this.options({
 					outputFile: false,
@@ -27,6 +29,15 @@ module.exports = grunt => {
 					grunt.log.writeln(chalk.magenta('Could not find any files to validate'));
 					done(true);
 					return;
+				}
+
+				// Handle extends option
+				if (extendsOption) {
+					const config = options.overrideConfig || {};
+					options.overrideConfig = defineConfig({
+						...config,
+						extends: extendsOption
+					});
 				}
 
 				const engine = new ESLint(options);
